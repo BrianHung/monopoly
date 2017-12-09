@@ -3,7 +3,7 @@ Bay Area Edition
 
 ## Conceptual
 
-![alt-right](https://github.com/BrianHung/monopoly/conceptual/bay-area-concept-png "Stop hovering over this!")
+![alt-right](https://github.com/BrianHung/monopoly/blob/master/conceptual/bay-area-concept.png "Stop hovering over this!")
 
 # Questions
 
