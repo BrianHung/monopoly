@@ -19,5 +19,14 @@ public Player {
         piece = _piece;
         balance = 1500;
     }
+    
+    public payMortage() {
+        for (Property property : mortaged) {
+            if (balance < 0) {
+                throw new BankruptException("Oh no! You've defaulted on your mortage.");
+            }
+            balance = balance - property.rate();
+        }
+    }
 
 }
