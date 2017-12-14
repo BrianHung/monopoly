@@ -1,11 +1,18 @@
 public class PlayerQueue {
 
+	// Number of players.
 	int size;
+	
+	// References current player.
 	Node head;
-
-	public PlayerQueue(Player[] players) {
-		size = players.length;
-		head = constructQueue(players);
+	
+	// Stores players for easy reference.
+	Player[] players;
+    
+	public PlayerQueue(Player[] _players) {
+		size = _players.length;
+		head = constructQueue(_players);
+		players = _players;
 	}
 	
 	private Node constuctQueue(Player[] players) {
@@ -28,6 +35,24 @@ public class PlayerQueue {
 		
 		// Returns front of linkedlist.
 		return frnt;
+	}
+	    
+	public Player next() {
+		head = head.tail;
+		return head.player;
+	}
+	
+	// In hindsight, I should've let Neel do this for practice.
+	public void dequeue(Player player) {
+		Node temp = head, next = head.tail;
+		for (int i= 0; i < size; i++) {
+		    if (player.equals(next.player)) {
+				temp.tail = next.tail;
+				size = size - 1; break;
+			} else {
+				temp = next; next = temp.tail;
+			}
+		}
 	}
 	
 	class Node {
