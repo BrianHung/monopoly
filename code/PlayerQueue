@@ -1,0 +1,49 @@
+public class PlayerQueue {
+
+	int size;
+	Node head;
+
+	public PlayerQueue(Player[] players) {
+		size = players.length;
+		head = constructQueue(players);
+	}
+	
+	private Node constuctQueue(Player[] players) {
+		// Checks that there is more than one player.
+		assert(players.length >= 1);
+		
+		// Creates a pointer to the front of the list.
+		Node frnt = curr = new Node(players[0]), prev;
+		
+		// Iterates through players, making a linkedlist.
+		for (int i= 1; i < size; i++) {
+			 prev = curr;
+			 curr = new Node(players[i]);
+			 prev.tail = curr;
+		}
+		
+		// Creates a pointer from end of list to front.
+		curr.tail = frnt;
+		
+		
+		// Returns front of linkedlist.
+		return frnt;
+	}
+	
+	class Node {
+	
+		public Player player;
+		public Node tail;
+		
+		public Node(Player _player) {
+			player = _player;
+			tail = null;
+		}
+		
+		public Node(Player _player, Node _tail) {
+			player = _player;
+			tail = _tail;
+		}	
+	}
+
+}
