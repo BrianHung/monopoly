@@ -5,9 +5,12 @@ public Board {
     private Tile[] tile;
     
     private int numPlayers;
+    
+    private bool gameOver;
 
     public Board(int _numPlayers) {
         numPlayers = _numPlayers
+        gameOver = false;
     }
     
     public int rollDice() {
