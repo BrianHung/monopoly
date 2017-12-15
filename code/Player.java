@@ -8,7 +8,11 @@ public Player {
     
     private Piece piece;
     
+    // Balance; cannot be negative.
     private int balance;
+    
+    // Location of Player.
+    private int currTile;
     
     private List<Property> owned;
     
@@ -27,6 +31,14 @@ public Player {
             }
             balance = balance - property.rate();
         }
+    }
+    
+    public move() {
+        return rollDice() + rollDice();
+    }
+    
+    public int location() {
+        return currTile;
     }
 
 }
