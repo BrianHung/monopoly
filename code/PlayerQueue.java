@@ -36,6 +36,10 @@ public class PlayerQueue {
 		// Returns front of linkedlist.
 		return frnt;
 	}
+	
+	public Player curr() {
+		return head.player;
+	}
 	    
 	public Player next() {
 		head = head.tail;
