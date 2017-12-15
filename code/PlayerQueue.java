@@ -41,8 +41,9 @@ public class PlayerQueue {
 		return head.player;
 	}
 	    
-	public void next() {
+	public Player next() {
 		head = head.tail;
+		return curr();
 	}
 	
 	// In hindsight, I should've let Neel do this for practice.
