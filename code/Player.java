@@ -1,7 +1,7 @@
-public Player {
+public class Player {
 
     enum Piece {
-        SEGWAY, TESLA, CABLECAR, GOOGLEBUS, BART, AC72, AVIATO;
+        SEGWAY, TESLA, CABLECAR, GOOGLEBUS, BART, AC72, AVIATO , AVOCADOTOAST;
     }
 
     private String name;
